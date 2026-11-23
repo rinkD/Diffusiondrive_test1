@@ -1,6 +1,9 @@
+# DiffusionDrive nuScenes 分支复现
+
+李特 · 2026-11-23
+仓库 `hustvl/DiffusionDrive` 分支 `nusc` · AutoDL RTX 4090D 24G · 单卡
 
 <img width="1704" height="3170" alt="DiffusionDrive_全流程示意图" src="https://github.com/user-attachments/assets/8988d0d8-ce95-462a-8744-81f463e8c812" />
-DiffusionDrive` 分支 `nusc` · AutoDL RTX 4090D 24G · 单卡
 
 ---
 

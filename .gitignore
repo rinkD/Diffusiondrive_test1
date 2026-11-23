@@ -1,0 +1,29 @@
+# 权重不进仓库，来源见 README 第 6 节
+*.pth
+*.pt
+*.ckpt
+
+# 原始数据集
+data/nuscenes/
+data/samples/
+data/sweeps/
+data/can_bus/
+
+# 训练产物
+work_dirs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# 系统
+.DS_Store
+Thumbs.db
+desktop.ini

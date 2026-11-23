@@ -1,0 +1,49 @@
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+/root/miniconda3/lib/python3.8/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+[AUTODL_PATCH_FLASH] flash_attn not available -> pure-torch attention fallback
+projects.mmdet3d_plugin
+Traceback (most recent call last):
+  File "tools/test.py", line 325, in <module>
+    main()
+  File "tools/test.py", line 206, in main
+    init_dist(args.launcher, **cfg.dist_params)
+  File "/root/miniconda3/lib/python3.8/site-packages/mmcv/runner/dist_utils.py", line 41, in init_dist
+    _init_dist_pytorch(backend, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/mmcv/runner/dist_utils.py", line 72, in _init_dist_pytorch
+    torch.cuda.set_device(rank % num_gpus)
+ZeroDivisionError: integer division or modulo by zero
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 1428) of binary: /root/miniconda3/bin/python
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/root/miniconda3/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/run.py", line 728, in <module>
+    main()
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 345, in wrapper
+    return f(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/run.py", line 724, in main
+    run(args)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/run.py", line 715, in run
+    elastic_launch(
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 131, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 245, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+tools/test.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-11-23_14:08:57
+  host      : localhost
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1428)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
